@@ -1,0 +1,21 @@
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider-container {
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+}
+
+.box {
+    width: 300px;
+    padding: 20px;
+    margin-right: 20px;
+    background-color: #f0f0f0;
+}
+
