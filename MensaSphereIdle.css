@@ -1,0 +1,26 @@
+body{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vw;
+}
+
+.title{
+    font-size: 12vw;
+}
+
+.lang{
+    size: 15%;
+    height: 100px;
+    margin: 10px;
+    border-radius: 20px;
+    border-color: black;
+    border-style: solid;
+}
+
+
+.content{
+    margin: auto;
+    width: 75%;
+}

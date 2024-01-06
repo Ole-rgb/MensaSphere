@@ -19,3 +19,16 @@ section {
     background-color: #f0f0f0;
 }
 
+.box-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.food-image{
+    height: auto;
+    width: 200px;
+}
+
+.counterName{
+    padding-right: 25px;
+}
