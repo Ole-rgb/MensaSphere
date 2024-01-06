@@ -16,7 +16,9 @@
     justify-content: space-between;
     align-items: center;
 }
-
+.card-container:hover{
+    cursor:pointer;
+}
 .card-content{
     flex: 95%;
 }
@@ -105,4 +107,17 @@ tr:last-child td{
 .nut-data{
     display: none;
     margin-left: 10px;
+}
+.back{
+    position: absolute;
+    top: 20px;
+    right:20px;
+    background-color: white;
+    font-size: 300%;
+    color: black;
+    text-decoration: none;
+    border-radius: 3px;
+    border-style: solid;
+    padding-left: 5px ;
+    padding-right: 5px ;
 }
