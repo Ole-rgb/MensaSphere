@@ -6,53 +6,12 @@
     <link rel="stylesheet" href="MensaSphere.css">
 </head>
 
-<script>
-    function toggleCardView(id){
-        card = document.getElementById(id);
-        nutData = card.getElementsByClassName("nut-data")[0];
-        arrow = card.getElementsByClassName("expand-arrow")[0];
-        console.log(nutData.style.display)
-        if(nutData.style.display === "initial"){
-            //collapse
-            card.style.width = "250px";
-            nutData.style.display = "none";
-            arrow.textContent = "\u276F";
-        }
-        else{
-            //expand
-            card.style.width = "500px";
-            nutData.style.display = "initial";
-            arrow.textContent = "\u276E";
-        }
-    }
-	
-	function toggleContainer() {
-		var right = document.getElementById("rightSide");
-		const elements = document.querySelectorAll('.conter-container');
-        if (right.style.display === "none") {
-			right.style.display = "";
-			elements.forEach(element => {
-				element.style.width = '40vw'; // Set the desired width value
-			});
-		  //left.sytle.width = "50vw"; 
-        } else {
-			right.style.display = "none";
-			elements.forEach(element => {
-				element.style.width = '80vw'; // Set the desired width value
-			});
-		 // left.sytle.width = "100vw"; 
-        }
+<script type="text/javascript" src="MensaSphere.js"></script>
 
-      }
-</script>
-<style>
-
-</style>
 <body>
     <a class="back" href="/index.html">
         &#9754;
     </a>
-	<button onclick="toggleContainer()">Toggle Container</button>
     <div class="flex-container" >
 	
 		<div class="left-container" id="leftSide">
