@@ -25,13 +25,38 @@
             arrow.textContent = "\u276E";
         }
     }
-</script>
+	
+	function toggleContainer() {
+		var right = document.getElementById("rightSide");
+		const elements = document.querySelectorAll('.conter-container');
+        if (right.style.display === "none") {
+			right.style.display = "";
+			elements.forEach(element => {
+				element.style.width = '40vw'; // Set the desired width value
+			});
+		  //left.sytle.width = "50vw"; 
+        } else {
+			right.style.display = "none";
+			elements.forEach(element => {
+				element.style.width = '80vw'; // Set the desired width value
+			});
+		 // left.sytle.width = "100vw"; 
+        }
 
+      }
+</script>
+<style>
+
+</style>
 <body>
     <a class="back" href="/index.html">
         &#9754;
     </a>
-    <div class="flex-container">
+	<button onclick="toggleContainer()">Toggle Container</button>
+    <div class="flex-container" >
+	
+		<div class="left-container" id="leftSide">
+		<h1 id="headline"> </h1>
         <table class="overview">
 
             <tr>
@@ -523,6 +548,486 @@
 
         </table>
     </div>
+	
+	
+	
+	<div class="right-container" id="rightSide">
+		<h1 id="headline">Wochenplan</h1>
+        <table class="overview">
+
+            <tr>
+                <th class="counter">
+                    A
+                </th>
+                <td >
+                    <div class="conter-container" >
+                    <div class="card" >
+                        <div class="card-container">
+                            <div class="card-content">
+                                <img class="card-image" src="https://spoonacular.com/cdn/ingredients_100x100/apple.jpg" alt="image of the food"/>
+                                <div class="text">
+                                    <div class="card-text">
+                                        <h1>
+                                            Essen 1
+                                        </h1>
+                                        <h2>3.99</h2>
+                                    </div>
+                                    <div class="card-icons">
+                                        <img alt="weizen"/>
+                                        <img alt="schwein" />
+                                        <img alt="soja" />
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nut-data">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            Nährwert
+                                        </th>
+                                        <th>
+                                            Pro Portion
+                                        </th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Fett</td>
+                                        <td>20g</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Zucker</td>
+                                        <td>20g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Protein</td>
+                                        <td>20g</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="card" >
+                        <div class="card-container">
+                            <div class="card-content">
+                                <img class="card-image" src="https://spoonacular.com/cdn/ingredients_100x100/apple.jpg" alt="image of the food"/>
+                                <div class="text">
+                                    <div class="card-text">
+                                        <h1>
+                                            Essen 1
+                                        </h1>
+                                        <h2>3.99</h2>
+                                    </div>
+                                    <div class="card-icons">
+                                        <img alt="weitzen"/>
+                                        <img alt="schwein" />
+                                        <img alt="soja" />
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nut-data">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            Nährwert
+                                        </th>
+                                        <th>
+                                            Pro Portion
+                                        </th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Fett</td>
+                                        <td>20g</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Zucker</td>
+                                        <td>20g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Protein</td>
+                                        <td>20g</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="card" >
+                        <div class="card-container">
+                            <div class="card-content">
+                                <img class="card-image" src="https://spoonacular.com/cdn/ingredients_100x100/apple.jpg" alt="image of the food"/>
+                                <div class="text">
+                                    <div class="card-text">
+                                        <h1>
+                                            Essen 1
+                                        </h1>
+                                        <h2>3.99</h2>
+                                    </div>
+                                    <div class="card-icons">
+                                        <img alt="weitzen"/>
+                                        <img alt="schwein" />
+                                        <img alt="soja" />
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nut-data">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            Nährwert
+                                        </th>
+                                        <th>
+                                            Pro Portion
+                                        </th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Fett</td>
+                                        <td>20g</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Zucker</td>
+                                        <td>20g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Protein</td>
+                                        <td>20g</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                </td>  
+            </tr>
+
+
+            <tr>
+                <th class="counter">
+                    B
+                </th>
+                <td >
+                    <div class="conter-container" >
+                    <div class="card"  >
+                        <div class="card-container">
+                            <div class="card-content">
+                                <img class="card-image" src="https://spoonacular.com/cdn/ingredients_100x100/apple.jpg" alt="image of the food"/>
+                                <div class="text">
+                                    <div class="card-text">
+                                        <h1>
+                                            Essen 1
+                                        </h1>
+                                        <h2>3.99</h2>
+                                    </div>
+                                    <div class="card-icons">
+                                        <img alt="weizen"/>
+                                        <img alt="schwein" />
+                                        <img alt="soja" />
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nut-data">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            Nährwert
+                                        </th>
+                                        <th>
+                                            Pro Portion
+                                        </th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Fett</td>
+                                        <td>20g</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Zucker</td>
+                                        <td>20g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Protein</td>
+                                        <td>20g</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="card"  >
+                        <div class="card-container">
+                            <div class="card-content">
+                                <img class="card-image" src="https://spoonacular.com/cdn/ingredients_100x100/apple.jpg" alt="image of the food"/>
+                                <div class="text">
+                                    <div class="card-text">
+                                        <h1>
+                                            Essen 1
+                                        </h1>
+                                        <h2>3.99</h2>
+                                    </div>
+                                    <div class="card-icons">
+                                        <img alt="weitzen"/>
+                                        <img alt="schwein" />
+                                        <img alt="soja" />
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nut-data">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            Nährwert
+                                        </th>
+                                        <th>
+                                            Pro Portion
+                                        </th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Fett</td>
+                                        <td>20g</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Zucker</td>
+                                        <td>20g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Protein</td>
+                                        <td>20g</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="card" >
+                        <div class="card-container">
+                            <div class="card-content">
+                                <img class="card-image" src="https://spoonacular.com/cdn/ingredients_100x100/apple.jpg" alt="image of the food"/>
+                                <div class="text">
+                                    <div class="card-text">
+                                        <h1>
+                                            Essen 1
+                                        </h1>
+                                        <h2>3.99</h2>
+                                    </div>
+                                    <div class="card-icons">
+                                        <img alt="weitzen"/>
+                                        <img alt="schwein" />
+                                        <img alt="soja" />
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nut-data">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            Nährwert
+                                        </th>
+                                        <th>
+                                            Pro Portion
+                                        </th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Fett</td>
+                                        <td>20g</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Zucker</td>
+                                        <td>20g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Protein</td>
+                                        <td>20g</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                </td>  
+            </tr>
+
+            <tr>
+                <th class="counter">
+                    C
+                </th>
+                <td >
+                    <div class="conter-container" >
+                    <div class="card">
+                        <div class="card-container">
+                            <div class="card-content">
+                                <img class="card-image" src="https://spoonacular.com/cdn/ingredients_100x100/apple.jpg" alt="image of the food"/>
+                                <div class="text">
+                                    <div class="card-text">
+                                        <h1>
+                                            Essen 1
+                                        </h1>
+                                        <h2>3.99</h2>
+                                    </div>
+                                    <div class="card-icons">
+                                        <img alt="weizen"/>
+                                        <img alt="schwein" />
+                                        <img alt="soja" />
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nut-data">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            Nährwert
+                                        </th>
+                                        <th>
+                                            Pro Portion
+                                        </th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Fett</td>
+                                        <td>20g</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Zucker</td>
+                                        <td>20g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Protein</td>
+                                        <td>20g</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-container">
+                            <div class="card-content">
+                                <img class="card-image" src="https://spoonacular.com/cdn/ingredients_100x100/apple.jpg" alt="image of the food"/>
+                                <div class="text">
+                                    <div class="card-text">
+                                        <h1>
+                                            Essen 1
+                                        </h1>
+                                        <h2>3.99</h2>
+                                    </div>
+                                    <div class="card-icons">
+                                        <img alt="weitzen"/>
+                                        <img alt="schwein" />
+                                        <img alt="soja" />
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nut-data">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            Nährwert
+                                        </th>
+                                        <th>
+                                            Pro Portion
+                                        </th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Fett</td>
+                                        <td>20g</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Zucker</td>
+                                        <td>20g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Protein</td>
+                                        <td>20g</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-container">
+                            <div class="card-content">
+                                <img class="card-image" src="https://spoonacular.com/cdn/ingredients_100x100/apple.jpg" alt="image of the food"/>
+                                <div class="text">
+                                    <div class="card-text">
+                                        <h1>
+                                            Essen 1
+                                        </h1>
+                                        <h2>3.99</h2>
+                                    </div>
+                                    <div class="card-icons">
+                                        <img alt="weitzen"/>
+                                        <img alt="schwein" />
+                                        <img alt="soja" />
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nut-data">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            Nährwert
+                                        </th>
+                                        <th>
+                                            Pro Portion
+                                        </th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Fett</td>
+                                        <td>20g</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Zucker</td>
+                                        <td>20g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Protein</td>
+                                        <td>20g</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                </td>  
+            </tr>
+
+        </table>
+    </div>
+	</div>
+	
 </body>
 
 </html>
