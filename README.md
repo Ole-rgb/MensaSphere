@@ -18,5 +18,5 @@ Die Benutzeroberfläche von MensaSphere ist sowohl auf Deutsch als auch auf Engl
 + ### Benutzerfreundlichkeit
 Die Benutzeroberfläche von MensaSphere wurde entwickelt, um eine einfache und angenehme Benutzererfahrung zu gewährleisten. Die Navigation ist intuitiv, und die Informationen sind leicht verständlich dargestellt.
 
-+ ### Split-Screen-Ansicht (kommt noch)
++ ### Split-Screen-Ansicht
 Die Benutzeroberfläche von MensaSphere teilt sich automatisch in zwei, wenn vor dem Bildschirm mehrere Menschen erkannt werden.
