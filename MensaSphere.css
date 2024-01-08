@@ -16,23 +16,23 @@
     justify-content: space-between;
     align-items: center;
 }
+
 .card-container:hover{
     cursor:pointer;
 }
-.card-content{
-    flex: 95%;
-}
-
 
 .card:hover {
     background-color: lightslategray;
+}
+
+.card-content{
+    flex: 95%;
 }
 
 .card-image {
     width: 100%;
     object-fit: cover;
     border-radius: 15px;
-
 }
 
 .card .text {
@@ -123,38 +123,41 @@ tr:last-child td{
 }
 
 .flex-container{
-	display: flex;
+    display: flex;
     justify-content: space-between;
-	
     padding: 10px;
-
 }
 
 
 #leftSide {
-   
     padding: 10px;
-	
-	width: 100vw; 
-	overflow-x: auto;
-  }
+    width: 100vw; 
+    overflow-x: auto;
+}
 
- #rightSide {
+#rightSide {
     border-left: 1px solid black;
     padding: 10px;
-	
-	width: 50vw; 
-  }
-  
-  .conter-container{
-	width: 40vw;
-  }
-  
-  #headline{
-	text-align: center;
-	height: 10px;
-  }
-  
-  .card-image{
-	height: 8vw; 
-  }
+    width: 50vw; 
+}
+
+.conter-container{
+    width: 40vw;
+}
+
+#headline{
+    text-align: center;
+    height: 10px;
+}
+
+.card-image{
+    height: 8vw; 
+}
+
+
+.right-container .card:hover {
+    background-color: white;
+}
+.right-container .card-container:hover{
+    cursor: default;
+}
