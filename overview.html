@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="MensaSphere.css">
 </head>
 
-<script type="text/javascript" src="MensaSphere.js"></script>
-
 <body>
     <a class="back" href="/index.html">
         &#9754;
@@ -27,7 +25,7 @@
                     <div class="card" id="a1" onclick='toggleCardView("a1")'>
                         <div class="card-container">
                             <div class="card-content">
-                                <img class="card-image" src="images/chickencurry.png" alt="image of the food"/>
+                                <img class="card-image" src="images/currywurst_schwein.jpg" alt="image of the food"/>
                                 <div class="text">
                                     <div class="card-text">
                                         <h1>
@@ -78,7 +76,7 @@
                     <div class="card" id="a2" onclick='toggleCardView("a2")'>
                         <div class="card-container">
                             <div class="card-content">
-                                <img class="card-image" src="https://spoonacular.com/cdn/ingredients_100x100/apple.jpg" alt="image of the food"/>
+                                <img class="card-image" src="images/currywurst_geflügel.jpg" alt="image of the food"/>
                                 <div class="text">
                                     <div class="card-text">
                                         <h1>
@@ -129,7 +127,7 @@
                     <div class="card" id="a3" onclick='toggleCardView("a3")'>
                         <div class="card-container">
                             <div class="card-content">
-                                <img class="card-image" src="https://spoonacular.com/cdn/ingredients_100x100/apple.jpg" alt="image of the food"/>
+                                <img class="card-image" src="images/currywurst_vegan.jpeg" alt="image of the food"/>
                                 <div class="text">
                                     <div class="card-text">
                                         <h1>
@@ -190,7 +188,7 @@
                     <div class="card" id="b1" onclick='toggleCardView("b1")'>
                         <div class="card-container">
                             <div class="card-content">
-                                <img class="card-image" src="https://spoonacular.com/cdn/ingredients_100x100/apple.jpg" alt="image of the food"/>
+                                <img class="card-image" src="images/chickencurry.png" alt="image of the food"/>
                                 <div class="text">
                                     <div class="card-text">
                                         <h1>
@@ -241,7 +239,7 @@
                     <div class="card" id="b2" onclick='toggleCardView("b2")'>
                         <div class="card-container">
                             <div class="card-content">
-                                <img class="card-image" src="https://spoonacular.com/cdn/ingredients_100x100/apple.jpg" alt="image of the food"/>
+                                <img class="card-image" src="images/pasta.png" alt="image of the food"/>
                                 <div class="text">
                                     <div class="card-text">
                                         <h1>
@@ -292,7 +290,7 @@
                     <div class="card" id="b3" onclick='toggleCardView("b3")'>
                         <div class="card-container">
                             <div class="card-content">
-                                <img class="card-image" src="https://spoonacular.com/cdn/ingredients_100x100/apple.jpg" alt="image of the food"/>
+                                <img class="card-image" src="images/salat.png" alt="image of the food"/>
                                 <div class="text">
                                     <div class="card-text">
                                         <h1>
@@ -352,7 +350,7 @@
                     <div class="card" id="c1" onclick='toggleCardView("c1")'>
                         <div class="card-container">
                             <div class="card-content">
-                                <img class="card-image" src="https://spoonacular.com/cdn/ingredients_100x100/apple.jpg" alt="image of the food"/>
+                                <img class="card-image" src="images/rosenkohlcurry.png" alt="image of the food"/>
                                 <div class="text">
                                     <div class="card-text">
                                         <h1>
@@ -403,7 +401,7 @@
                     <div class="card" id="c2" onclick='toggleCardView("c2")'>
                         <div class="card-container">
                             <div class="card-content">
-                                <img class="card-image" src="https://spoonacular.com/cdn/ingredients_100x100/apple.jpg" alt="image of the food"/>
+                                <img class="card-image" src="images/blaubeercreme.png" alt="image of the food"/>
                                 <div class="text">
                                     <div class="card-text">
                                         <h1>
@@ -454,7 +452,7 @@
                     <div class="card" id="c3" onclick='toggleCardView("c3")'>
                         <div class="card-container">
                             <div class="card-content">
-                                <img class="card-image" src="https://spoonacular.com/cdn/ingredients_100x100/apple.jpg" alt="image of the food"/>
+                                <img class="card-image" src="images/" alt="image of the food"/>
                                 <div class="text">
                                     <div class="card-text">
                                         <h1>
@@ -986,7 +984,38 @@
         </table>
     </div>
 	</div>
-	
+    
+    <div id="timer-container">
+        <div id="timer-bar"></div>
+    </div>
+  
 </body>
 
+<script type="text/javascript" src="MensaSphere.js"></script>
+
+<script>
+    // initial time in seconds
+    let timeInSeconds = 60;
+    
+    const timerBar = document.getElementById('timer-bar');
+  
+    const initialWidth = (timeInSeconds / 60) * 100;
+    timerBar.style.width = `${initialWidth}%`;
+  
+    function updateTimerBar() {
+      timeInSeconds--;
+      const width = (timeInSeconds / 60 ) * 100;
+      timerBar.style.width = `${width}%`;
+  
+      if (timeInSeconds <= 0) {
+        clearInterval(timerInterval);
+        //TODO: change back to normal view
+        alert("Bitte gib den Platz frei!");
+      }
+    }
+  
+    // start timer
+    const timerInterval = setInterval(updateTimerBar, 1000);
+</script>
+  
 </html>

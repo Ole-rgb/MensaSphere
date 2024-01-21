@@ -161,3 +161,24 @@ tr:last-child td{
 .right-container .card-container:hover{
     cursor: default;
 }
+
+
+/*  */
+
+#timer-container {
+    width: 400px;
+    height: 20px;
+    border: 1px solid #ccc;
+    position: relative;
+    margin: 20px;
+  }
+
+  #timer-bar {
+    height: 100%;
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 1s linear;
+  }
