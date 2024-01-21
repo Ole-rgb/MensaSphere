@@ -78,16 +78,18 @@ function toggleContainer(showSplitView) {
     var nutData = card.getElementsByClassName("nut-data")[0];
     var arrow = card.getElementsByClassName("expand-arrow")[0];
     console.log(nutData.style.display)
-    if(nutData.style.display === "initial"){
+    if(nutData.style.display === "flex"){
         //collapse
         card.style.width = "250px";
+        card.style.minWidth = "250px";
         nutData.style.display = "none";
         arrow.textContent = "\u276F";
     }
     else{
         //expand
-        card.style.width = "500px";
-        nutData.style.display = "initial";
+        card.style.width = "600px";
+        card.style.minWidth = "600px";
+        nutData.style.display = "flex";
         arrow.textContent = "\u276E";
     }
 }
