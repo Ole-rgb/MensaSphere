@@ -1,3 +1,6 @@
+:root {
+    --showFade: none; /* change to initial in splitview */
+  }
 .card {
     margin: 5px;
     padding:2%;
@@ -97,15 +100,29 @@
 .conter-container{
     display: flex;
     flex-direction: row;
-    overflow-x: auto;
-    width: 100%;
+    overflow-x: scroll;
     white-space: nowrap;
+
 }
 
 td{
     border-bottom: 5px solid black;
 }
 
+tr{
+    &::after {
+        display: var(--showFade);
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left:46%;
+        bottom: -3%;
+        pointer-events: none;
+        background-image: linear-gradient(to right, rgba(255,255,255,0), white 100%);
+        width: 4%;
+      }
+}
 tr:last-child td{
     border-bottom: none;
 }
@@ -157,7 +174,7 @@ tr:last-child td{
 
 #headline{
     text-align: center;
-    height: 10px;
+    margin: 0;
 }
 
 .card-image{
@@ -172,21 +189,26 @@ tr:last-child td{
     cursor: default;
 }
 
+.left-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 #timer-container {
+    display: none;
     width: 300px;
-    height: 20px;
+    height: 2em;
     border: 1px solid #ccc;
     position: relative;
-    margin: 20px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
   #timer-bar {
-    height: 20px;
+    height: 2em;
     background-color: black;
     width: 100%;
     position: absolute;
@@ -199,4 +221,5 @@ tr:last-child td{
   #timer-text {
     color: grey;
     z-index: 2;
+    font-size: 1.5em;
   }

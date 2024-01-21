@@ -50,25 +50,41 @@ function updateView(response) {
     tmp != showSplitView ? toggleContainer(showSplitView) : null; 
 }
 
+function set(name) {
+    console.log("set::name = " + name);
+    console.log("set::GET = " + dburl + name);
+    request.open("GET", dburl + name, true);
+	request.setRequestHeader("Authorization", "Basic " + btoa(loginname + ":" + loginpass));
+	request.withCredentials = true;
+    request.send();
+}
 
 function toggleContainer(showSplitView) {
 
     var right = document.getElementById("rightSide");
     const elements = document.querySelectorAll('.conter-container');
+    const timerContainer = document.getElementById("timer-container");
     if(showSplitView){
         //display the split view
         right.style.display = "";
         elements.forEach(element => {
             element.style.width = '40vw'; // Set the desired width value
         });
-      //left.sytle.width = "50vw"; 
+
+        // start timer
+        timeInSeconds = 10;
+        timerInterval = setInterval(updateTimerBar, 1000);
+
+        timerContainer.style.display = "flex";
     } else {
         //display the single user view
         right.style.display = "none";
         elements.forEach(element => {
             element.style.width = '80vw'; // Set the desired width value
         });
-     // left.sytle.width = "100vw"; 
+        
+        timerContainer.style.display = "none";
+        clearInterval(timerInterval);
     }
 
   }
